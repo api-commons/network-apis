@@ -20,6 +20,24 @@ publishers:
 - global-system-for-mobile-communications
 - gsma
 - open-gateway
+mentioned_by: 16
+mentioned_by_providers:
+- america-movil
+- att
+- camara-project
+- charter-communications
+- global-system-for-mobile-communications
+- gsma
+- infobip
+- kpn
+- open-gateway
+- orange
+- orange-business
+- plumma
+- telefonica
+- telkomsel
+- telstra
+- vonage
 apis:
   number-verification:
     release: https://github.com/camaraproject/NumberVerification/tree/r4.2

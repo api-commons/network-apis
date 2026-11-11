@@ -11,6 +11,7 @@ reference:
   standard: camara-2025
   home: https://camaraproject.org
   license: Apache-2.0
+  mentions: '\bcamara\b'
   publishers: [camara-project, gsma, global-system-for-mobile-communications, open-gateway]
   apis:
     - api: number-verification

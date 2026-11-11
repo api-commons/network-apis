@@ -4,7 +4,7 @@ The network capabilities mobile operators expose to developers -- verifying a ph
 
 **A reference context.** The shape belongs to [camara-2025](https://camaraproject.org) (Apache-2.0). This repository does not restate or rename it: `schema/` holds the standard's own objects, each linked to the release it was read from, and `crosswalk/` measures, from each provider's harvested OpenAPI, which operations it implements and what share of the standard's request and response fields it carries.
 
-Measured across 282 providers tagged Telecommunications, Telecom, Mobile Network Operator, Network APIs, CAMARA, 5G, Open Gateway, Communications, Identity Verification, Fraud Prevention in [APIs.io](https://apis.io): **8 implement the standard.**
+Measured across 282 providers tagged Telecommunications, Telecom, Mobile Network Operator, Network APIs, CAMARA, 5G, Open Gateway, Communications, Identity Verification, Fraud Prevention in [APIs.io](https://apis.io): **8 implement the standard**; 16 name it somewhere in a spec.
 
 ## The standard's APIs
 
