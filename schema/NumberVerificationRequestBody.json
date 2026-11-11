@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "NumberVerificationRequestBody",
+  "type": "object",
+  "x-commons-source": "standard",
+  "x-commons-standard": "camara-2025",
+  "x-commons-release": "https://github.com/camaraproject/NumberVerification/tree/r4.2",
+  "properties": {
+    "phoneNumber": {},
+    "hashedPhoneNumber": {}
+  }
+}

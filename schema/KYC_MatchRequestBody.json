@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "KYC_MatchRequestBody",
+  "type": "object",
+  "x-commons-source": "standard",
+  "x-commons-standard": "camara-2025",
+  "x-commons-release": "https://github.com/camaraproject/KnowYourCustomer/tree/r2.2",
+  "properties": {
+    "phoneNumber": {},
+    "idDocument": {},
+    "name": {},
+    "givenName": {},
+    "familyName": {},
+    "nameKanaHankaku": {},
+    "nameKanaZenkaku": {},
+    "middleNames": {},
+    "familyNameAtBirth": {},
+    "address": {},
+    "streetName": {},
+    "streetNumber": {},
+    "postalCode": {},
+    "region": {},
+    "locality": {},
+    "country": {},
+    "houseNumberExtension": {},
+    "birthdate": {},
+    "email": {},
+    "gender": {}
+  }
+}

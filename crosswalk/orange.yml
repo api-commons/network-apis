@@ -1,0 +1,19 @@
+provider: orange
+standard: camara-2025
+operations:
+- api: number-verification
+  operation: GET /device-phone-number
+  evidence: openapi/_original/orange-openapi.yml#GET /device-phone-number
+  fields: 1
+  crosswalk:
+    devicePhoneNumber: devicePhoneNumber
+  coverage: 1.0
+- api: number-verification
+  operation: POST /verify
+  evidence: openapi/_original/orange-openapi.yml#POST /verify
+  fields: 3
+  crosswalk:
+    phoneNumber: phoneNumber
+    hashedPhoneNumber: hashedPhoneNumber
+    devicePhoneNumberVerified: devicePhoneNumberVerified
+  coverage: 1.0

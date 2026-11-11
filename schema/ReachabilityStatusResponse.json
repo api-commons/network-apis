@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ReachabilityStatusResponse",
+  "type": "object",
+  "x-commons-source": "standard",
+  "x-commons-standard": "camara-2025",
+  "x-commons-release": "https://github.com/camaraproject/DeviceStatus/tree/r2.2",
+  "properties": {
+    "lastStatusTime": {},
+    "reachable": {},
+    "connectivity": {}
+  }
+}

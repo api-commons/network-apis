@@ -1,0 +1,68 @@
+context: network-apis
+name: Operator Network APIs (CAMARA)
+kind: reference
+intro: >-
+  The network capabilities mobile operators expose to developers -- verifying a phone number, checking
+  for a SIM swap, verifying or retrieving a device's location, its reachability and roaming status,
+  matching KYC details, and requesting quality on demand. The shape is owned by the GSMA Open Gateway
+  CAMARA project, so this context publishes CAMARA's own objects and measures who implements them.
+tags: [Telecommunications, Telecom, Mobile Network Operator, Network APIs, CAMARA, 5G, Open Gateway, Communications, Identity Verification, Fraud Prevention]
+reference:
+  standard: camara-2025
+  home: https://camaraproject.org
+  license: Apache-2.0
+  publishers: [camara-project, gsma, global-system-for-mobile-communications, open-gateway]
+  apis:
+    - api: number-verification
+      release: https://github.com/camaraproject/NumberVerification/tree/r4.2
+      operations:
+        - {op: POST /verify, request: NumberVerificationRequestBody, response: NumberVerificationMatchResponse}
+        - {op: GET /device-phone-number, response: NumberVerificationShareResponse}
+    - api: sim-swap
+      release: https://github.com/camaraproject/SimSwap/tree/r4.3
+      operations:
+        - {op: POST /check, request: CreateCheckSimSwap, response: CheckSimSwapInfo}
+        - {op: POST /retrieve-date, request: CreateSimSwapDate, response: SimSwapInfo}
+    - api: location-verification
+      release: https://github.com/camaraproject/DeviceLocation/tree/r3.2
+      operations:
+        - {op: POST /verify, request: VerifyLocationRequest, response: VerifyLocationResponse}
+    - api: location-retrieval
+      release: https://github.com/camaraproject/DeviceLocation/tree/r3.2
+      operations:
+        - {op: POST /retrieve, request: RetrievalLocationRequest, response: Location}
+    - api: device-reachability-status
+      release: https://github.com/camaraproject/DeviceStatus/tree/r2.2
+      operations:
+        - {op: POST /retrieve, request: RequestReachabilityStatus, response: ReachabilityStatusResponse}
+    - api: device-roaming-status
+      release: https://github.com/camaraproject/DeviceStatus/tree/r2.2
+      operations:
+        - {op: POST /retrieve, request: RoamingStatusRequest, response: RoamingStatusResponse}
+    - api: kyc-match
+      release: https://github.com/camaraproject/KnowYourCustomer/tree/r2.2
+      operations:
+        - {op: POST /match, request: KYC_MatchRequestBody, response: KYC_MatchResponse}
+    - api: quality-on-demand
+      release: https://github.com/camaraproject/QualityOnDemand/tree/r3.2
+      operations:
+        - {op: POST /sessions, request: CreateSession, response: SessionInfo}
+        - {op: "GET /sessions/{sessionId}", response: SessionInfo}
+findings:
+  - >-
+    Eight operators and communications platforms implement CAMARA in their own published OpenAPI,
+    out of 282 telecom, identity and fraud providers measured. Number verification (6) and SIM swap (7)
+    lead; location, device status and quality on demand are each implemented by one or two.
+  - >-
+    Implementers that publish CAMARA carry its fields intact: the best-matching operation for number
+    verification, SIM swap and KYC match reaches 100% coverage at most of them.
+decisions:
+  - >-
+    A reference context publishes the standard's objects under the standard's own names (camelCase), and
+    the commons naming ruleset does not apply to them: renaming a standard's fields would fork it.
+  - >-
+    The standard body's own catalog listings (camara-project, gsma, global-system-for-mobile-communications,
+    open-gateway) are listed as publishers and not counted, because they carry the specification verbatim.
+  - >-
+    Pinned to the latest release of each CAMARA API repository at measurement time, not to main, which
+    carries work-in-progress versions.

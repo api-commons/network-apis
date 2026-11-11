@@ -1,0 +1,93 @@
+provider: infobip
+standard: camara-2025
+operations:
+- api: kyc-match
+  operation: POST /match
+  evidence: openapi/_original/infobip-camara-openapi.json#POST /camara/kyc-match/v0.3/match
+  fields: 52
+  crosswalk:
+    phoneNumber: phoneNumber
+    idDocument: idDocument
+    name: name
+    givenName: givenName
+    familyName: familyName
+    nameKanaHankaku: nameKanaHankaku
+    nameKanaZenkaku: nameKanaZenkaku
+    middleNames: middleNames
+    familyNameAtBirth: familyNameAtBirth
+    address: address
+    streetName: streetName
+    streetNumber: streetNumber
+    postalCode: postalCode
+    region: region
+    locality: locality
+    country: country
+    houseNumberExtension: houseNumberExtension
+    birthdate: birthdate
+    email: email
+    gender: gender
+    idDocumentMatch: idDocumentMatch
+    nameMatch: nameMatch
+    nameMatchScore: nameMatchScore
+    givenNameMatch: givenNameMatch
+    givenNameMatchScore: givenNameMatchScore
+    familyNameMatch: familyNameMatch
+    familyNameMatchScore: familyNameMatchScore
+    nameKanaHankakuMatch: nameKanaHankakuMatch
+    nameKanaHankakuMatchScore: nameKanaHankakuMatchScore
+    nameKanaZenkakuMatch: nameKanaZenkakuMatch
+    nameKanaZenkakuMatchScore: nameKanaZenkakuMatchScore
+    middleNamesMatch: middleNamesMatch
+    middleNamesMatchScore: middleNamesMatchScore
+    familyNameAtBirthMatch: familyNameAtBirthMatch
+    familyNameAtBirthMatchScore: familyNameAtBirthMatchScore
+    addressMatch: addressMatch
+    addressMatchScore: addressMatchScore
+    streetNameMatch: streetNameMatch
+    streetNameMatchScore: streetNameMatchScore
+    streetNumberMatch: streetNumberMatch
+    streetNumberMatchScore: streetNumberMatchScore
+    postalCodeMatch: postalCodeMatch
+    regionMatch: regionMatch
+    regionMatchScore: regionMatchScore
+    localityMatch: localityMatch
+    localityMatchScore: localityMatchScore
+    countryMatch: countryMatch
+    houseNumberExtensionMatch: houseNumberExtensionMatch
+    birthdateMatch: birthdateMatch
+    emailMatch: emailMatch
+    emailMatchScore: emailMatchScore
+    genderMatch: genderMatch
+  coverage: 1.0
+- api: number-verification
+  operation: GET /device-phone-number
+  evidence: openapi/_original/infobip-camara-openapi.json#GET /camara/number-verification/v2/device-phone-number
+  fields: 1
+  crosswalk:
+    devicePhoneNumber: devicePhoneNumber
+  coverage: 1.0
+- api: number-verification
+  operation: POST /verify
+  evidence: openapi/_original/infobip-camara-openapi.json#POST /camara/number-verification/v0/verify
+  fields: 3
+  crosswalk:
+    phoneNumber: phoneNumber
+    devicePhoneNumberVerified: devicePhoneNumberVerified
+  coverage: 0.67
+- api: sim-swap
+  operation: POST /check
+  evidence: openapi/_original/infobip-camara-openapi.json#POST /camara/sim-swap/v0/check
+  fields: 3
+  crosswalk:
+    phoneNumber: phoneNumber
+    maxAge: maxAge
+    swapped: swapped
+  coverage: 1.0
+- api: sim-swap
+  operation: POST /retrieve-date
+  evidence: openapi/_original/infobip-camara-openapi.json#POST /camara/sim-swap/v0/retrieve-date
+  fields: 3
+  crosswalk:
+    phoneNumber: phoneNumber
+    latestSimChange: latestSimChange
+  coverage: 0.67

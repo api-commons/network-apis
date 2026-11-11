@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CreateSession",
+  "type": "object",
+  "x-commons-source": "standard",
+  "x-commons-standard": "camara-2025",
+  "x-commons-release": "https://github.com/camaraproject/QualityOnDemand/tree/r3.2",
+  "properties": {
+    "device": {},
+    "applicationServer": {},
+    "devicePorts": {},
+    "applicationServerPorts": {},
+    "qosProfile": {},
+    "sink": {},
+    "sinkCredential": {},
+    "duration": {}
+  }
+}

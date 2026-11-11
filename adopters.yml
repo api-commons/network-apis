@@ -1,0 +1,104 @@
+adopters:
+- provider: america-movil
+  role: implementer
+  apis:
+  - sim-swap
+  url: https://apis.io/providers/america-movil/
+- provider: att
+  role: implementer
+  apis:
+  - number-verification
+  - sim-swap
+  url: https://apis.io/providers/att/
+- provider: camara-project
+  role: publisher
+  apis:
+  - device-reachability-status
+  - device-roaming-status
+  - kyc-match
+  - location-retrieval
+  - location-verification
+  - number-verification
+  - quality-on-demand
+  - sim-swap
+  url: https://apis.io/providers/camara-project/
+- provider: global-system-for-mobile-communications
+  role: publisher
+  apis:
+  - device-roaming-status
+  - kyc-match
+  - location-retrieval
+  - location-verification
+  - number-verification
+  - quality-on-demand
+  - sim-swap
+  url: https://apis.io/providers/global-system-for-mobile-communications/
+- provider: gsma
+  role: publisher
+  apis:
+  - device-reachability-status
+  - device-roaming-status
+  - kyc-match
+  - location-retrieval
+  - location-verification
+  - number-verification
+  - quality-on-demand
+  - sim-swap
+  url: https://apis.io/providers/gsma/
+- provider: infobip
+  role: implementer
+  apis:
+  - kyc-match
+  - number-verification
+  - sim-swap
+  url: https://apis.io/providers/infobip/
+- provider: kpn
+  role: implementer
+  apis:
+  - sim-swap
+  url: https://apis.io/providers/kpn/
+- provider: open-gateway
+  role: publisher
+  apis:
+  - device-reachability-status
+  - device-roaming-status
+  - kyc-match
+  - location-retrieval
+  - location-verification
+  - number-verification
+  - quality-on-demand
+  - sim-swap
+  url: https://apis.io/providers/open-gateway/
+- provider: orange
+  role: implementer
+  apis:
+  - number-verification
+  url: https://apis.io/providers/orange/
+- provider: orange-business
+  role: implementer
+  apis:
+  - device-reachability-status
+  - device-roaming-status
+  - kyc-match
+  - location-retrieval
+  - location-verification
+  - number-verification
+  - quality-on-demand
+  - sim-swap
+  url: https://apis.io/providers/orange-business/
+- provider: telefonica
+  role: implementer
+  apis:
+  - device-roaming-status
+  - location-verification
+  - number-verification
+  - quality-on-demand
+  - sim-swap
+  url: https://apis.io/providers/telefonica/
+- provider: telstra
+  role: implementer
+  apis:
+  - kyc-match
+  - number-verification
+  - sim-swap
+  url: https://apis.io/providers/telstra/

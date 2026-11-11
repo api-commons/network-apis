@@ -1,0 +1,78 @@
+provider: telefonica
+standard: camara-2025
+operations:
+- api: device-roaming-status
+  operation: POST /retrieve
+  evidence: openapi/_original/telefonica-device-roaming-openapi.yml#POST /device-roaming/retrieve
+  fields: 5
+  crosswalk:
+    device: device
+    lastStatusTime: lastStatusTime
+    roaming: roaming
+    countryCode: countryCode
+    countryName: countryName
+  coverage: 1.0
+- api: location-verification
+  operation: POST /verify
+  evidence: openapi/_original/telefonica-location-verification-openapi.yml#POST /location-verification/verify
+  fields: 7
+  crosswalk:
+    device: device
+    area: area
+    maxAge: maxAge
+    verificationResult: verificationResult
+    lastLocationTime: lastLocationTime
+    matchRate: matchRate
+  coverage: 0.86
+- api: number-verification
+  operation: POST /verify
+  evidence: openapi/_original/telefonica-number-verification-openapi.yml#POST /number-verification/verify
+  fields: 3
+  crosswalk:
+    phoneNumber: phoneNumber
+    devicePhoneNumberVerified: devicePhoneNumberVerified
+  coverage: 0.67
+- api: quality-on-demand
+  operation: GET /sessions/{sessionId}
+  evidence: openapi/_original/telefonica-quality-on-demand-openapi.yml#GET /qod/sessions/{sessionId}
+  fields: 13
+  crosswalk:
+    device: device
+    qosProfile: qosProfile
+    sessionId: sessionId
+    duration: duration
+    startedAt: startedAt
+    expiresAt: expiresAt
+    qosStatus: qosStatus
+  coverage: 0.54
+- api: quality-on-demand
+  operation: POST /sessions
+  evidence: openapi/_original/telefonica-quality-on-demand-openapi.yml#POST /qod/sessions
+  fields: 21
+  crosswalk:
+    device: device
+    applicationServer: applicationServer
+    qosProfile: qosProfile
+    duration: duration
+    sessionId: sessionId
+    startedAt: startedAt
+    expiresAt: expiresAt
+    qosStatus: qosStatus
+  coverage: 0.38
+- api: sim-swap
+  operation: POST /check
+  evidence: openapi/_original/telefonica-sim-swap-openapi.yml#POST /sim-swap/check
+  fields: 3
+  crosswalk:
+    phoneNumber: phoneNumber
+    maxAge: maxAge
+    swapped: swapped
+  coverage: 1.0
+- api: sim-swap
+  operation: POST /retrieve-date
+  evidence: openapi/_original/telefonica-sim-swap-openapi.yml#POST /sim-swap/retrieve-date
+  fields: 3
+  crosswalk:
+    phoneNumber: phoneNumber
+    latestSimChange: latestSimChange
+  coverage: 0.67

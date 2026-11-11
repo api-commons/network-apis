@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CreateSimSwapDate",
+  "type": "object",
+  "x-commons-source": "standard",
+  "x-commons-standard": "camara-2025",
+  "x-commons-release": "https://github.com/camaraproject/SimSwap/tree/r4.3",
+  "properties": {
+    "phoneNumber": {}
+  }
+}

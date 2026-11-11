@@ -1,0 +1,20 @@
+provider: america-movil
+standard: camara-2025
+operations:
+- api: sim-swap
+  operation: POST /check
+  evidence: openapi/_original/america-movil-claro-sim-swap-openapi.json#POST /check
+  fields: 3
+  crosswalk:
+    phoneNumber: phoneNumber
+    maxAge: maxAge
+    swapped: swapped
+  coverage: 1.0
+- api: sim-swap
+  operation: POST /retrieve-date
+  evidence: openapi/_original/america-movil-claro-sim-swap-openapi.json#POST /retrieve-date
+  fields: 3
+  crosswalk:
+    phoneNumber: phoneNumber
+    latestSimChange: latestSimChange
+  coverage: 0.67

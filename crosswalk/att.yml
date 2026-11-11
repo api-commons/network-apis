@@ -1,0 +1,28 @@
+provider: att
+standard: camara-2025
+operations:
+- api: number-verification
+  operation: POST /verify
+  evidence: openapi/_original/att-network-apis.yaml#POST /number-verification/v1/verify
+  fields: 3
+  crosswalk:
+    phoneNumber: phoneNumber
+    devicePhoneNumberVerified: devicePhoneNumberVerified
+  coverage: 0.67
+- api: sim-swap
+  operation: POST /check
+  evidence: openapi/_original/att-network-apis.yaml#POST /sim-swap/v1/check
+  fields: 3
+  crosswalk:
+    phoneNumber: phoneNumber
+    maxAge: maxAge
+    swapped: swapped
+  coverage: 1.0
+- api: sim-swap
+  operation: POST /retrieve-date
+  evidence: openapi/_original/att-network-apis.yaml#POST /sim-swap/v1/retrieve-date
+  fields: 3
+  crosswalk:
+    phoneNumber: phoneNumber
+    latestSimChange: latestSimChange
+  coverage: 0.67

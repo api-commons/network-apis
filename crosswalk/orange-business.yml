@@ -1,0 +1,177 @@
+provider: orange-business
+standard: camara-2025
+operations:
+- api: device-reachability-status
+  operation: POST /retrieve
+  evidence: openapi/_original/orange-business-device-reachability-status-openapi.yml#POST /retrieve
+  fields: 4
+  crosswalk:
+    device: device
+    lastStatusTime: lastStatusTime
+    reachable: reachable
+    connectivity: connectivity
+  coverage: 1.0
+- api: device-roaming-status
+  operation: POST /retrieve
+  evidence: openapi/_original/orange-business-device-roaming-status-openapi.yml#POST /retrieve
+  fields: 5
+  crosswalk:
+    device: device
+    lastStatusTime: lastStatusTime
+    roaming: roaming
+    countryCode: countryCode
+    countryName: countryName
+  coverage: 1.0
+- api: kyc-match
+  operation: POST /match
+  evidence: openapi/_original/orange-business-kyc-match-openapi.yml#POST /match
+  fields: 52
+  crosswalk:
+    phoneNumber: phoneNumber
+    idDocument: idDocument
+    name: name
+    givenName: givenName
+    familyName: familyName
+    nameKanaHankaku: nameKanaHankaku
+    nameKanaZenkaku: nameKanaZenkaku
+    middleNames: middleNames
+    familyNameAtBirth: familyNameAtBirth
+    address: address
+    streetName: streetName
+    streetNumber: streetNumber
+    postalCode: postalCode
+    region: region
+    locality: locality
+    country: country
+    houseNumberExtension: houseNumberExtension
+    birthdate: birthdate
+    email: email
+    gender: gender
+    idDocumentMatch: idDocumentMatch
+    nameMatch: nameMatch
+    nameMatchScore: nameMatchScore
+    givenNameMatch: givenNameMatch
+    givenNameMatchScore: givenNameMatchScore
+    familyNameMatch: familyNameMatch
+    familyNameMatchScore: familyNameMatchScore
+    nameKanaHankakuMatch: nameKanaHankakuMatch
+    nameKanaHankakuMatchScore: nameKanaHankakuMatchScore
+    nameKanaZenkakuMatch: nameKanaZenkakuMatch
+    nameKanaZenkakuMatchScore: nameKanaZenkakuMatchScore
+    middleNamesMatch: middleNamesMatch
+    middleNamesMatchScore: middleNamesMatchScore
+    familyNameAtBirthMatch: familyNameAtBirthMatch
+    familyNameAtBirthMatchScore: familyNameAtBirthMatchScore
+    addressMatch: addressMatch
+    addressMatchScore: addressMatchScore
+    streetNameMatch: streetNameMatch
+    streetNameMatchScore: streetNameMatchScore
+    streetNumberMatch: streetNumberMatch
+    streetNumberMatchScore: streetNumberMatchScore
+    postalCodeMatch: postalCodeMatch
+    regionMatch: regionMatch
+    regionMatchScore: regionMatchScore
+    localityMatch: localityMatch
+    localityMatchScore: localityMatchScore
+    countryMatch: countryMatch
+    houseNumberExtensionMatch: houseNumberExtensionMatch
+    birthdateMatch: birthdateMatch
+    emailMatch: emailMatch
+    emailMatchScore: emailMatchScore
+    genderMatch: genderMatch
+  coverage: 1.0
+- api: location-retrieval
+  operation: POST /retrieve
+  evidence: openapi/_original/orange-business-device-location-retrieval-openapi.yml#POST /retrieve
+  fields: 6
+  crosswalk:
+    device: device
+    maxAge: maxAge
+    maxSurface: maxSurface
+    lastLocationTime: lastLocationTime
+    area: area
+  coverage: 0.83
+- api: location-verification
+  operation: POST /verify
+  evidence: openapi/_original/orange-business-device-location-verification-openapi.yml#POST /verify
+  fields: 7
+  crosswalk:
+    device: device
+    area: area
+    maxAge: maxAge
+    verificationResult: verificationResult
+    lastLocationTime: lastLocationTime
+    matchRate: matchRate
+  coverage: 0.86
+- api: number-verification
+  operation: GET /device-phone-number
+  evidence: openapi/_original/orange-business-number-verification-openapi.yml#GET /device-phone-number
+  fields: 1
+  crosswalk:
+    devicePhoneNumber: devicePhoneNumber
+  coverage: 1.0
+- api: number-verification
+  operation: POST /verify
+  evidence: openapi/_original/orange-business-number-verification-openapi.yml#POST /verify
+  fields: 3
+  crosswalk:
+    phoneNumber: phoneNumber
+    hashedPhoneNumber: hashedPhoneNumber
+    devicePhoneNumberVerified: devicePhoneNumberVerified
+  coverage: 1.0
+- api: quality-on-demand
+  operation: GET /sessions/{sessionId}
+  evidence: openapi/_original/orange-business-quality-on-demand-openapi.yml#GET /sessions/{sessionId}
+  fields: 13
+  crosswalk:
+    device: device
+    applicationServer: applicationServer
+    devicePorts: devicePorts
+    applicationServerPorts: applicationServerPorts
+    qosProfile: qosProfile
+    sink: sink
+    sinkCredential: sinkCredential
+    sessionId: sessionId
+    duration: duration
+    startedAt: startedAt
+    expiresAt: expiresAt
+    qosStatus: qosStatus
+    statusInfo: statusInfo
+  coverage: 1.0
+- api: quality-on-demand
+  operation: POST /sessions
+  evidence: openapi/_original/orange-business-quality-on-demand-openapi.yml#POST /sessions
+  fields: 21
+  crosswalk:
+    device: device
+    applicationServer: applicationServer
+    devicePorts: devicePorts
+    applicationServerPorts: applicationServerPorts
+    qosProfile: qosProfile
+    sink: sink
+    sinkCredential: sinkCredential
+    duration: duration
+    sessionId: sessionId
+    startedAt: startedAt
+    expiresAt: expiresAt
+    qosStatus: qosStatus
+    statusInfo: statusInfo
+  coverage: 0.62
+- api: sim-swap
+  operation: POST /check
+  evidence: openapi/_original/orange-business-sim-swap-openapi.yml#POST /check
+  fields: 3
+  crosswalk:
+    phoneNumber: phoneNumber
+    maxAge: maxAge
+    swapped: swapped
+  coverage: 1.0
+- api: sim-swap
+  operation: POST /retrieve-date
+  evidence: openapi/_original/orange-business-sim-swap-openapi.yml#POST /retrieve-date
+  fields: 3
+  crosswalk:
+    phoneNumber: phoneNumber
+    latestSimChange: latestSimChange
+    monitoredPeriod: monitoredPeriod
+  coverage: 1.0

@@ -1,0 +1,66 @@
+context: network-apis
+kind: reference
+standard: camara-2025
+cohort:
+  tags:
+  - Telecommunications
+  - Telecom
+  - Mobile Network Operator
+  - Network APIs
+  - CAMARA
+  - 5G
+  - Open Gateway
+  - Communications
+  - Identity Verification
+  - Fraud Prevention
+  providers_with_harvested_openapi: 282
+implementers: 8
+publishers:
+- camara-project
+- global-system-for-mobile-communications
+- gsma
+- open-gateway
+apis:
+  number-verification:
+    release: https://github.com/camaraproject/NumberVerification/tree/r4.2
+    providers: 6
+    operations:
+    - POST /verify
+    - GET /device-phone-number
+  sim-swap:
+    release: https://github.com/camaraproject/SimSwap/tree/r4.3
+    providers: 7
+    operations:
+    - POST /check
+    - POST /retrieve-date
+  location-verification:
+    release: https://github.com/camaraproject/DeviceLocation/tree/r3.2
+    providers: 2
+    operations:
+    - POST /verify
+  location-retrieval:
+    release: https://github.com/camaraproject/DeviceLocation/tree/r3.2
+    providers: 1
+    operations:
+    - POST /retrieve
+  device-reachability-status:
+    release: https://github.com/camaraproject/DeviceStatus/tree/r2.2
+    providers: 1
+    operations:
+    - POST /retrieve
+  device-roaming-status:
+    release: https://github.com/camaraproject/DeviceStatus/tree/r2.2
+    providers: 2
+    operations:
+    - POST /retrieve
+  kyc-match:
+    release: https://github.com/camaraproject/KnowYourCustomer/tree/r2.2
+    providers: 3
+    operations:
+    - POST /match
+  quality-on-demand:
+    release: https://github.com/camaraproject/QualityOnDemand/tree/r3.2
+    providers: 2
+    operations:
+    - POST /sessions
+    - GET /sessions/{sessionId}

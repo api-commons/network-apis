@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "VerifyLocationResponse",
+  "type": "object",
+  "x-commons-source": "standard",
+  "x-commons-standard": "camara-2025",
+  "x-commons-release": "https://github.com/camaraproject/DeviceLocation/tree/r3.2",
+  "properties": {
+    "verificationResult": {},
+    "lastLocationTime": {},
+    "matchRate": {},
+    "device": {}
+  }
+}
